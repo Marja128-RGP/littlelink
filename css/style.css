@@ -83,7 +83,10 @@
 	height: 8rem;
 	border-radius: 50%;
 	object-fit: cover;
+	background-color: #fff;  /* keeps vector cutouts readable in dark theme */
 	background-position: center;
+	border: 2px solid #eaeaea; /* soft gray ring */
+	box-sizing: border-box;
 	margin-bottom: var(--spacing-l);
 	margin-left: auto;
 	margin-right: auto;
@@ -92,15 +95,15 @@
 
 /* Typography Scale */
 h1 {
-	margin:0 0 var(--spacing-m) 0;
-	font-size:var(--scale-5);           /* ~49px */
-  	font-weight:800;
-	line-height:1.1;
-	letter-spacing:-0.02em;
+	margin:0 0 var(--spacing-xl) 0;
+	font-size:var(--scale-1);           /* same as page description */
+  	font-weight:400;
+	line-height:1.6;
+	letter-spacing:0;
 	word-wrap:break-word;
 	overflow-wrap:break-word;
-	hyphens:auto;           /* Delete this to remove automatic hyphen on line break */
 }
+
 body {
 	font-size:var(--scale-1);           /* 20px */
   	line-height:1.6;
@@ -125,7 +128,8 @@ footer {
 body {
 	font-size:var(--scale-0);
 }
-.container p {
+.container p,
+h1 {
 	font-size:var(--scale-0);
 }
 .avatar {
